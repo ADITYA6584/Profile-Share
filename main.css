@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* //for fast loading  */
+@layer utilities {
+    .video-class {
+      @apply will-change-transform;
+    }
+  }
+  
+
+.overlayactive {
+    opacity: 100;
+    pointer-events: initial;
+}
+
+/* Media Query  */
+@media (max-width: 850px) {
+  .card-wrapper {
+    max-width: 250px;
+    width: 300px;
+  }
+  .bottom-group {
+    flex-direction: column;
+  }
+  .modal {
+    width: 70vw;
+  }
+}
+
+@media (max-width: 400px) {
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card-wrapper {
+    position: static;
+    top: 0;
+    left: 0;
+    translate: 0 0;
+    margin: 0 12px;
+    padding: 0 10px;
+  }
+  .card-wrapper div img {
+    width: 120px;
+    height: 120px;
+  }
+  .user-name h2 {
+    font-size: 1.3rem;
+  }
+  .modal {
+    width: 80vw;
+  }
+}
